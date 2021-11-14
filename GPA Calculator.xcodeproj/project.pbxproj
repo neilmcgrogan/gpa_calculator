@@ -7,22 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD841F672733A86A00731E56 /* GPA_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD841F662733A86A00731E56 /* GPA_CalculatorApp.swift */; };
-		AD841F692733A86A00731E56 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD841F682733A86A00731E56 /* ContentView.swift */; };
-		AD841F6B2733A86C00731E56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD841F6A2733A86C00731E56 /* Assets.xcassets */; };
-		AD841F6E2733A86C00731E56 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD841F6D2733A86C00731E56 /* Preview Assets.xcassets */; };
+		AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2B27405FF0002452AA /* ButtonStyle.swift */; };
+		AD727E2E2740600A002452AA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2D2740600A002452AA /* DataModel.swift */; };
+		AD727E3027406011002452AA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2F27406011002452AA /* ViewModel.swift */; };
+		AD727E322740604B002452AA /* AddCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E312740604B002452AA /* AddCourseView.swift */; };
+		AD727E3427406051002452AA /* AddSemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3327406051002452AA /* AddSemesterView.swift */; };
+		AD727E3627406055002452AA /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3527406055002452AA /* CourseView.swift */; };
+		AD727E382740605A002452AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E372740605A002452AA /* HomeView.swift */; };
+		AD727E3A2740605F002452AA /* SemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E392740605F002452AA /* SemesterView.swift */; };
+		AD727E3C27406064002452AA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3B27406064002452AA /* SettingsView.swift */; };
+		AD727E3E2740606A002452AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3D2740606A002452AA /* ViewController.swift */; };
+		ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */; };
+		ADA18F1D27405EE700433379 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA18F1C27405EE700433379 /* ContentView.swift */; };
+		ADA18F1F27405EE800433379 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA18F1E27405EE800433379 /* Assets.xcassets */; };
+		ADA18F2227405EE800433379 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADA18F2127405EE800433379 /* Preview Assets.xcassets */; };
+		ADA18F2D27405FC000433379 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA18F2C27405FC000433379 /* extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD841F632733A86A00731E56 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD841F662733A86A00731E56 /* GPA_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPA_CalculatorApp.swift; sourceTree = "<group>"; };
-		AD841F682733A86A00731E56 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		AD841F6A2733A86C00731E56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD841F6D2733A86C00731E56 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		AD727E2B27405FF0002452AA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		AD727E2D2740600A002452AA /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		AD727E2F27406011002452AA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AD727E312740604B002452AA /* AddCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseView.swift; sourceTree = "<group>"; };
+		AD727E3327406051002452AA /* AddSemesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSemesterView.swift; sourceTree = "<group>"; };
+		AD727E3527406055002452AA /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		AD727E372740605A002452AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AD727E392740605F002452AA /* SemesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterView.swift; sourceTree = "<group>"; };
+		AD727E3B27406064002452AA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AD727E3D2740606A002452AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ADA18F1727405EE700433379 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPA_CalculatorApp.swift; sourceTree = "<group>"; };
+		ADA18F1C27405EE700433379 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ADA18F1E27405EE800433379 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ADA18F2127405EE800433379 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ADA18F2C27405FC000433379 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AD841F602733A86A00731E56 /* Frameworks */ = {
+		ADA18F1427405EE700433379 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,51 +54,94 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AD841F5A2733A86A00731E56 = {
+		ADA18F0E27405EE700433379 = {
 			isa = PBXGroup;
 			children = (
-				AD841F652733A86A00731E56 /* GPA Calculator */,
-				AD841F642733A86A00731E56 /* Products */,
+				ADA18F1927405EE700433379 /* GPA Calculator */,
+				ADA18F1827405EE700433379 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AD841F642733A86A00731E56 /* Products */ = {
+		ADA18F1827405EE700433379 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AD841F632733A86A00731E56 /* GPA Calculator.app */,
+				ADA18F1727405EE700433379 /* GPA Calculator.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AD841F652733A86A00731E56 /* GPA Calculator */ = {
+		ADA18F1927405EE700433379 /* GPA Calculator */ = {
 			isa = PBXGroup;
 			children = (
-				AD841F662733A86A00731E56 /* GPA_CalculatorApp.swift */,
-				AD841F682733A86A00731E56 /* ContentView.swift */,
-				AD841F6A2733A86C00731E56 /* Assets.xcassets */,
-				AD841F6C2733A86C00731E56 /* Preview Content */,
+				ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */,
+				ADA18F1C27405EE700433379 /* ContentView.swift */,
+				ADA18F2A27405F9900433379 /* Model */,
+				ADA18F2B27405FA900433379 /* Views */,
+				ADA18F2927405F8000433379 /* ButtonStyle */,
+				ADA18F2827405F6E00433379 /* Elements */,
+				ADA18F1E27405EE800433379 /* Assets.xcassets */,
+				ADA18F2027405EE800433379 /* Preview Content */,
 			);
 			path = "GPA Calculator";
 			sourceTree = "<group>";
 		};
-		AD841F6C2733A86C00731E56 /* Preview Content */ = {
+		ADA18F2027405EE800433379 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				AD841F6D2733A86C00731E56 /* Preview Assets.xcassets */,
+				ADA18F2127405EE800433379 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ADA18F2827405F6E00433379 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				ADA18F2C27405FC000433379 /* extension.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
+		ADA18F2927405F8000433379 /* ButtonStyle */ = {
+			isa = PBXGroup;
+			children = (
+				AD727E2B27405FF0002452AA /* ButtonStyle.swift */,
+			);
+			path = ButtonStyle;
+			sourceTree = "<group>";
+		};
+		ADA18F2A27405F9900433379 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD727E2D2740600A002452AA /* DataModel.swift */,
+				AD727E2F27406011002452AA /* ViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ADA18F2B27405FA900433379 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD727E3D2740606A002452AA /* ViewController.swift */,
+				AD727E312740604B002452AA /* AddCourseView.swift */,
+				AD727E3327406051002452AA /* AddSemesterView.swift */,
+				AD727E3527406055002452AA /* CourseView.swift */,
+				AD727E372740605A002452AA /* HomeView.swift */,
+				AD727E392740605F002452AA /* SemesterView.swift */,
+				AD727E3B27406064002452AA /* SettingsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AD841F622733A86A00731E56 /* GPA Calculator */ = {
+		ADA18F1627405EE700433379 /* GPA Calculator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AD841F712733A86C00731E56 /* Build configuration list for PBXNativeTarget "GPA Calculator" */;
+			buildConfigurationList = ADA18F2527405EE800433379 /* Build configuration list for PBXNativeTarget "GPA Calculator" */;
 			buildPhases = (
-				AD841F5F2733A86A00731E56 /* Sources */,
-				AD841F602733A86A00731E56 /* Frameworks */,
-				AD841F612733A86A00731E56 /* Resources */,
+				ADA18F1327405EE700433379 /* Sources */,
+				ADA18F1427405EE700433379 /* Frameworks */,
+				ADA18F1527405EE700433379 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -84,25 +149,25 @@
 			);
 			name = "GPA Calculator";
 			productName = "GPA Calculator";
-			productReference = AD841F632733A86A00731E56 /* GPA Calculator.app */;
+			productReference = ADA18F1727405EE700433379 /* GPA Calculator.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AD841F5B2733A86A00731E56 /* Project object */ = {
+		ADA18F0F27405EE700433379 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
-					AD841F622733A86A00731E56 = {
+					ADA18F1627405EE700433379 = {
 						CreatedOnToolsVersion = 13.0;
 					};
 				};
 			};
-			buildConfigurationList = AD841F5E2733A86A00731E56 /* Build configuration list for PBXProject "GPA Calculator" */;
+			buildConfigurationList = ADA18F1227405EE700433379 /* Build configuration list for PBXProject "GPA Calculator" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,42 +175,53 @@
 				en,
 				Base,
 			);
-			mainGroup = AD841F5A2733A86A00731E56;
-			productRefGroup = AD841F642733A86A00731E56 /* Products */;
+			mainGroup = ADA18F0E27405EE700433379;
+			productRefGroup = ADA18F1827405EE700433379 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AD841F622733A86A00731E56 /* GPA Calculator */,
+				ADA18F1627405EE700433379 /* GPA Calculator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AD841F612733A86A00731E56 /* Resources */ = {
+		ADA18F1527405EE700433379 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD841F6E2733A86C00731E56 /* Preview Assets.xcassets in Resources */,
-				AD841F6B2733A86C00731E56 /* Assets.xcassets in Resources */,
+				ADA18F2227405EE800433379 /* Preview Assets.xcassets in Resources */,
+				ADA18F1F27405EE800433379 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		AD841F5F2733A86A00731E56 /* Sources */ = {
+		ADA18F1327405EE700433379 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD841F692733A86A00731E56 /* ContentView.swift in Sources */,
-				AD841F672733A86A00731E56 /* GPA_CalculatorApp.swift in Sources */,
+				AD727E3A2740605F002452AA /* SemesterView.swift in Sources */,
+				AD727E2E2740600A002452AA /* DataModel.swift in Sources */,
+				ADA18F2D27405FC000433379 /* extension.swift in Sources */,
+				AD727E3627406055002452AA /* CourseView.swift in Sources */,
+				AD727E382740605A002452AA /* HomeView.swift in Sources */,
+				AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */,
+				ADA18F1D27405EE700433379 /* ContentView.swift in Sources */,
+				AD727E3427406051002452AA /* AddSemesterView.swift in Sources */,
+				AD727E3E2740606A002452AA /* ViewController.swift in Sources */,
+				AD727E3027406011002452AA /* ViewModel.swift in Sources */,
+				AD727E3C27406064002452AA /* SettingsView.swift in Sources */,
+				AD727E322740604B002452AA /* AddCourseView.swift in Sources */,
+				ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		AD841F6F2733A86C00731E56 /* Debug */ = {
+		ADA18F2327405EE800433379 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -206,7 +282,7 @@
 			};
 			name = Debug;
 		};
-		AD841F702733A86C00731E56 /* Release */ = {
+		ADA18F2427405EE800433379 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -261,7 +337,7 @@
 			};
 			name = Release;
 		};
-		AD841F722733A86C00731E56 /* Debug */ = {
+		ADA18F2627405EE800433379 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -269,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -290,7 +367,7 @@
 			};
 			name = Debug;
 		};
-		AD841F732733A86C00731E56 /* Release */ = {
+		ADA18F2727405EE800433379 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -298,6 +375,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -322,25 +400,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AD841F5E2733A86A00731E56 /* Build configuration list for PBXProject "GPA Calculator" */ = {
+		ADA18F1227405EE700433379 /* Build configuration list for PBXProject "GPA Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD841F6F2733A86C00731E56 /* Debug */,
-				AD841F702733A86C00731E56 /* Release */,
+				ADA18F2327405EE800433379 /* Debug */,
+				ADA18F2427405EE800433379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AD841F712733A86C00731E56 /* Build configuration list for PBXNativeTarget "GPA Calculator" */ = {
+		ADA18F2527405EE800433379 /* Build configuration list for PBXNativeTarget "GPA Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AD841F722733A86C00731E56 /* Debug */,
-				AD841F732733A86C00731E56 /* Release */,
+				ADA18F2627405EE800433379 /* Debug */,
+				ADA18F2727405EE800433379 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AD841F5B2733A86A00731E56 /* Project object */;
+	rootObject = ADA18F0F27405EE700433379 /* Project object */;
 }
