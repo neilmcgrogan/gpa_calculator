@@ -8,7 +8,6 @@
 import SwiftUI
 
 extension Color {
-    
     static var offWhite = Color(red: 0.97, green: 0.97, blue: 1)
     
     static var grayText = Color(red: 0.3, green: 0.3, blue: 0.3)
@@ -17,7 +16,6 @@ extension Color {
 struct Extension: View {
     var body: some View {
         VStack {
-            
             Color.offWhite
             
             Color.grayText

@@ -17,7 +17,6 @@ import SwiftUI
  */
 
 struct SemesterView: View {
-    
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var editingData: EditingData
     @EnvironmentObject var sharedData: SharedData
@@ -45,7 +44,6 @@ struct SemesterView: View {
             Divider()
             
             VStack {
-                
                 if editingData.editSemMode {
                     Text("Courses for this semseter\n tap one to edit")
                         .font(.title).foregroundColor(.black)

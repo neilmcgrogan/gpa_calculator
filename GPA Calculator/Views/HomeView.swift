@@ -18,16 +18,10 @@ import SwiftUI
  */
 
 /*
- 
- (DONE)Build out full data models
- - Fix indexing issues when adding and deleting courses
- - Place sem & cour into container views
+ TODO
+ - Build out container sem viewer tiles
  - Add method of saving user data
- 
- FIX INDEXING ISSUES:
- Recreate a simulated model inside HomeView
- Attempt to add appending and deleting functions at particular two dimensional indexes...
- 
+ - Implement math
  */
 
 struct HomeView: View {
@@ -42,30 +36,18 @@ struct HomeView: View {
                 .font(.title)
                 .foregroundColor(.grayText)
             
-            Group {
+            Button("AddCourseView -->") {
                 
-                Button("SettingsView ->") {
-                    withAnimation {
-                        viewRouter.currentPage = .settingsView
-                    }
-                }.buttonStyle(ForwardButton())
-                
-                Button("AddSemesterView ->") {
-                    withAnimation {
-                        viewRouter.currentPage = .addSemesterView
-                    }
-                }.buttonStyle(ForwardButton())
-                
-                Button("SemesterView ->") {
-                    withAnimation {
-                        viewRouter.currentPage = .semesterView
-                    }
-                }.buttonStyle(ForwardButton())
-            }
+                withAnimation {
+                    viewRouter.currentPage = .addCourseView
+                }
+            }.buttonStyle(ForwardButton())
             
             VStack {
                 
                 Text("Select from the following semesters")
+                
+                SemesterTile(GPA: 3.667, semName: "Winter", semYear: 2022, creditsTaken: 12, creditsEarned: 45.0000)
                 
                 ForEach(sharedData.semesters) { semester in
                     Button(action: {

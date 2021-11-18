@@ -25,9 +25,22 @@ struct ViewController: View {
                 AddCourseView()
             case .courseView:
                 CourseView()
+            case .projections:
+                ProjectionsView()
             }
             
             Spacer()
+        }
+    }
+}
+
+struct ProjectionsView: View {
+    
+    var body: some View {
+        VStack {
+            Text("Projections")
+            
+            Text("In this view we...")
         }
     }
 }

@@ -41,41 +41,11 @@ struct CourseView: View {
                     if editingData.editCorPointer == course.id {
                         Text("Course: \(course.id), \(course.name), \(course.grade)")
                         
-                        Text("Checking that variables will line up...")
-                        
-                        Text("Pointer for : \(editingData.editCorPointer)")
-                        Text("Course ID: \(course.id)")
-                        
-                        Text("Pointer: \(course.id)")
-                        
-                        Button("SHow adat") {
-                            // problem: the two aren't equal
-                            if sharedData.semesters[editingData.editSemPointer - 1].course.count >= editingData.editCorPointer - 1 {
-                                print("deletion spot: \(sharedData.semesters[editingData.editSemPointer - 1].course[editingData.editCorPointer - 1])")
-                                print("Full array: \(sharedData.semesters[editingData.editSemPointer - 1].course)")
-                            }
-                        }
-                        
                         Button("Delete this semester") {
-                            if sharedData.semesters[editingData.editSemPointer - 1].course.count > 0 {
-                                // Not a prefered method
-                                //sharedData.semesters[editingData.editSemPointer - 1].course.remove(at: editingData.editCorPointer - 1)
-                                
-                                // Do this instead
-                                //print("Deleting data")
-                                //sharedData.semesters.remove(at: returnSemIndex())
-                                //editingData.editSemMode.toggle()
-                                
-                                // returnCorIndex()
-                                
-                                // Solution
-                                sharedData.semesters[editingData.editSemPointer - 1].course.remove(at: returnCorIndex())
-                                
-                                withAnimation {
-                                    viewRouter.currentPage = .semesterView
-                                }
-                            } else {
-                                print("Out of index, cannot delete")
+                            deleteCourse()
+                            
+                            withAnimation {
+                                viewRouter.currentPage = .semesterView
                             }
                         }.padding()
                     }
@@ -93,5 +63,11 @@ struct CourseView: View {
             }
         }
         return 9999
+    }
+    
+    func deleteCourse() {
+        sharedData.semesters[editingData.editSemPointer - 1].course[returnCorIndex()].name = "[DLT]"
+        sharedData.semesters[editingData.editSemPointer - 1].course[returnCorIndex()].grade = ""
+        sharedData.semesters[editingData.editSemPointer - 1].course[returnCorIndex()].credits = 0
     }
 }
