@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-/*
- 
- SettingsView can access:
- 
- <-HomeView
- 
- */
-
 struct SettingsView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     
@@ -29,7 +21,7 @@ struct SettingsView: View {
                 withAnimation {
                     viewRouter.currentPage = .homeView
                 }
-            }.buttonStyle(BackButton())
+            }.buttonStyle(BackButton()).padding()
             
             Divider()
             

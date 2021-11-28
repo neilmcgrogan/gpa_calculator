@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5DE37E27516F4F003654B1 /* HomeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37D27516F4F003654B1 /* HomeTile.swift */; };
+		0B5DE380275183EA003654B1 /* SmallCourseTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */; };
 		AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2B27405FF0002452AA /* ButtonStyle.swift */; };
 		AD727E2E2740600A002452AA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2D2740600A002452AA /* DataModel.swift */; };
 		AD727E3027406011002452AA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2F27406011002452AA /* ViewModel.swift */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5DE37D27516F4F003654B1 /* HomeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTile.swift; sourceTree = "<group>"; };
+		0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCourseTile.swift; sourceTree = "<group>"; };
 		AD727E2B27405FF0002452AA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		AD727E2D2740600A002452AA /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		AD727E2F27406011002452AA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
@@ -56,10 +60,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0BE8A326274C377E0091CD5B /* Adding Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD727E3327406051002452AA /* AddSemesterView.swift */,
+				AD727E312740604B002452AA /* AddCourseView.swift */,
+			);
+			path = "Adding Views";
+			sourceTree = "<group>";
+		};
+		0BE8A327274EA4E90091CD5B /* Editing Views */ = {
+			isa = PBXGroup;
+			children = (
+				AD727E392740605F002452AA /* SemesterView.swift */,
+				AD727E3527406055002452AA /* CourseView.swift */,
+			);
+			path = "Editing Views";
+			sourceTree = "<group>";
+		};
 		AD91D3C62741B8CE002324E2 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
+				0B5DE37D27516F4F003654B1 /* HomeTile.swift */,
 				AD91D3C72741B8E1002324E2 /* CourseTile.swift */,
+				0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */,
 				AD91D3C92741FC41002324E2 /* SemesterTile.swift */,
 			);
 			path = Tiles;
@@ -85,9 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */,
-				AD91D3C62741B8CE002324E2 /* Tiles */,
 				ADA18F2A27405F9900433379 /* Model */,
 				ADA18F2B27405FA900433379 /* Views */,
+				0BE8A327274EA4E90091CD5B /* Editing Views */,
+				0BE8A326274C377E0091CD5B /* Adding Views */,
+				AD91D3C62741B8CE002324E2 /* Tiles */,
 				ADA18F2927405F8000433379 /* ButtonStyle */,
 				ADA18F2827405F6E00433379 /* Elements */,
 				ADA18F1E27405EE800433379 /* Assets.xcassets */,
@@ -132,13 +158,9 @@
 		ADA18F2B27405FA900433379 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AD727E3B27406064002452AA /* SettingsView.swift */,
 				AD727E3D2740606A002452AA /* ViewController.swift */,
 				AD727E372740605A002452AA /* HomeView.swift */,
-				AD727E3B27406064002452AA /* SettingsView.swift */,
-				AD727E3327406051002452AA /* AddSemesterView.swift */,
-				AD727E312740604B002452AA /* AddCourseView.swift */,
-				AD727E3527406055002452AA /* CourseView.swift */,
-				AD727E392740605F002452AA /* SemesterView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -221,9 +243,11 @@
 				AD727E382740605A002452AA /* HomeView.swift in Sources */,
 				AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */,
 				AD727E3427406051002452AA /* AddSemesterView.swift in Sources */,
+				0B5DE380275183EA003654B1 /* SmallCourseTile.swift in Sources */,
 				AD727E3E2740606A002452AA /* ViewController.swift in Sources */,
 				AD727E3027406011002452AA /* ViewModel.swift in Sources */,
 				AD727E3C27406064002452AA /* SettingsView.swift in Sources */,
+				0B5DE37E27516F4F003654B1 /* HomeTile.swift in Sources */,
 				AD91D3CA2741FC41002324E2 /* SemesterTile.swift in Sources */,
 				AD727E322740604B002452AA /* AddCourseView.swift in Sources */,
 				ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */,

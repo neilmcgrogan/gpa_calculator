@@ -21,10 +21,6 @@ struct ViewController: View {
                 AddSemesterView()
             case .semesterView:
                 SemesterView()
-            case .addCourseView:
-                AddCourseView()
-            case .courseView:
-                CourseView()
             case .projections:
                 ProjectionsView()
             }

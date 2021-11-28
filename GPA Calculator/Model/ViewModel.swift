@@ -13,5 +13,5 @@ class ViewRouter: ObservableObject {
 }
 
 enum Page {
-    case homeView, settingsView, addSemesterView, semesterView, addCourseView, courseView, projections
+    case homeView, settingsView, addSemesterView, semesterView, projections
 }
