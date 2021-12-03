@@ -15,19 +15,25 @@ struct CourseTile: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(grade)").font(.title2).bold()
+                Text("\(grade)").bold().font(.title2).foregroundColor(.buttonColor)
                 
                 Text(name).bold().foregroundColor(Color.grayText)
                 
-                Text("\(credits) credits").font(.footnote).foregroundColor(.gray)
+                if credits == 1 {
+                    Text("\(credits) credit").font(.footnote).foregroundColor(.gray)
+                } else {
+                    Text("\(credits) credits").font(.footnote).foregroundColor(.gray)
+                }
                 
                 Spacer()
             }
             
             Spacer()
-        }.padding(5)
-        .frame(width: 125, height: 125, alignment: .center)
+        }.padding(7)
+        .frame(width: 125, height: 100, alignment: .center)
         .background(Color.white)
         .cornerRadius(15)
+        .shadow(radius: 2)
+        .padding(5)
     }
 }

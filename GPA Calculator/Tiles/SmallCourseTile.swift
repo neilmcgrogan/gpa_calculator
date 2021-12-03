@@ -15,7 +15,15 @@ struct SmallCourseTile: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(grade)").font(.title2).bold()
+                HStack(alignment: .center) {
+                    Text("\(grade)").bold().font(.title2).foregroundColor(.buttonColor)
+                    
+                    if credits == 1 {
+                        Text("/ \(credits) credit").font(.footnote).foregroundColor(.gray)
+                    } else {
+                        Text("/ \(credits) credits").font(.footnote).foregroundColor(.gray)
+                    }
+                }
                 
                 Text(name).bold().foregroundColor(Color.grayText)
                 
@@ -27,5 +35,7 @@ struct SmallCourseTile: View {
         .frame(width: 125, height: 65, alignment: .center)
         .background(Color.white)
         .cornerRadius(15)
+        .shadow(radius: 2)
+        .padding(5)
     }
 }

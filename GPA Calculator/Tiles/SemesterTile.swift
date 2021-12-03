@@ -16,19 +16,26 @@ struct SemesterTile: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(GPA, specifier: "%.2f")").bold().foregroundColor(.black)
+                Text("\(GPA, specifier: "%.2f")").bold().font(.title3).foregroundColor(.buttonColor)
                 
                 Text("\(semester)").bold().foregroundColor(Color.grayText)
                 
-                Text("\(creditsEarned, specifier: "%.2f")/\(creditsTaken, specifier: "%.2f") credits").font(.footnote).foregroundColor(.gray)
+                if creditsTaken == 1 {
+                    Text("\(creditsEarned, specifier: "%.2f")/\(creditsTaken, specifier: "%.0f") credit").font(.footnote).foregroundColor(.gray)
+                } else {
+                    Text("\(creditsEarned, specifier: "%.2f")/\(creditsTaken, specifier: "%.0f") credits").font(.footnote).foregroundColor(.gray)
+                }
+                
                 
                 Spacer()
             }
             
             Spacer()
-        }.padding(5)
-        .frame(width: 125, height: 125, alignment: .center)
+        }.padding(7)
+        .frame(width: 125, height: 100, alignment: .center)
         .background(Color.white)
         .cornerRadius(15)
+        .shadow(radius: 2)
+        .padding(5)
     }
 }

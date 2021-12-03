@@ -17,24 +17,39 @@ struct AddSemesterView: View {
     
     @State private var addCourseView = false
     
+    @State private var year = 1
+
+    
+    init() {
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.buttonColor)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.buttonColor)], for: .normal)
+    }
+    
     var body: some View {
         VStack(alignment: .leading) {
             if dataEdit.semesterIndex == "" {
-                Text("Add a semester")
-                    .bold().font(.title)
-                    .foregroundColor(.grayText)
-                
-                Button("<- Cancel") {
-                    withAnimation {
-                        viewRouter.currentPage = .homeView
-                    }
+                HStack {
+                    Text("Add a semester")
+                        .bold().font(.title)
+                        .foregroundColor(.grayText)
                     
-                    dataEdit.semesterIndex = ""
-                }.buttonStyle(BackButton())
+                    Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            viewRouter.currentPage = .homeView
+                        }
+                        
+                        dataEdit.semesterIndex = ""
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title)
+                            .foregroundColor(Color.buttonColor)
+                    }
+                }
                 
                 Divider()
-                
-                Spacer()
                 
                 Text("Pick a semester")
                     .bold()
@@ -50,31 +65,47 @@ struct AddSemesterView: View {
                     .bold()
                     .foregroundColor(.gray)
                 
-                ScrollView(showsIndicators: false) {
-                    ForEach(2010...2030, id: \.self) { index in
-                        Button("Semester year: \(String(index))") {
+                Picker("", selection: $year) {
+                    ForEach(10...30, id: \.self) {
+                        Text("'\($0)")
+                    }
+                }.pickerStyle(WheelPickerStyle())
+                
+                Spacer()
+                
+                if self.year != 0 {
+                    HStack {
+                        Spacer()
+                        
+                        Button("Next") {
                             withAnimation {
                                 self.addCourseView = true
                             }
                             
-                            dataEdit.semesterIndex = String(semName[selected]) + ", " + String(index)
-                        }.padding()
-                        .background(Color.white)
-                        .cornerRadius(12)
+                            dataEdit.semesterIndex = String(semName[selected]) + ", '" + String(self.year)
+                        }.buttonStyle(ButtonUI())
                     }
                 }
             } else {
-                Text("\(dataEdit.semesterIndex)")
-                    .bold().font(.title)
-                    .foregroundColor(.grayText)
-                
-                Button("<- Cancel") {
-                    withAnimation {
-                        viewRouter.currentPage = .homeView
-                    }
+                HStack {
+                    Text("\(dataEdit.semesterIndex)")
+                        .bold().font(.title)
+                        .foregroundColor(.grayText)
                     
-                    dataEdit.semesterIndex = ""
-                }.buttonStyle(BackButton())
+                    Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            viewRouter.currentPage = .homeView
+                        }
+                        
+                        dataEdit.semesterIndex = ""
+                    }) {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.title)
+                            .foregroundColor(Color.buttonColor)
+                    }
+                }
                 
                 Divider()
                 
@@ -103,37 +134,50 @@ struct AddSemesterView: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            Button("Finalize semester") {
+                            Button(action: {
                                 withAnimation {
                                     viewRouter.currentPage = .homeView
                                 }
                                 
                                 dataEdit.semesterIndex = ""
+                            }) {
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                    
+                                    Text("Finalize semester")
+                                }.font(.headline)
                             }.padding(5)
-                            .frame(width: 125, height: 125, alignment: .center)
-                            .background(Color.white)
+                            .foregroundColor(.white)
+                            .frame(width: 125, height: 65, alignment: .center)
+                            .background(Color.buttonColor)
                             .cornerRadius(15)
                             
                             ForEach(data.courses) { course in
                                 if dataEdit.semesterIndex == course.semesterName {
-                                    CourseTile(grade: course.grade, name: course.name, credits: course.credits)
+                                    SmallCourseTile(grade: course.grade, name: course.name, credits: course.credits)
                                 }
                             }
                         }
                     }
                     
+                    Spacer()
+                    
                     HStack {
                         Spacer()
                         
-                        Button("Add a new course") {
+                        Button(action: {
                             withAnimation {
                                 self.addCourseView.toggle()
                             }
-                        }.buttonStyle(ForwardButton())
+                        }) {
+                            HStack {
+                                Image(systemName: "plus")
+                                
+                                Text("Add a new course")
+                            }.font(.headline)
+                        }.buttonStyle(ButtonUI())
                     }.padding()
                 }
-                
-                Spacer()
             }
         }.padding()
     }

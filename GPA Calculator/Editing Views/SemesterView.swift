@@ -14,26 +14,30 @@ struct SemesterView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("\(dataEdit.semesterIndex)")
-                .font(.title)
-                .bold()
-                .foregroundColor(.grayText)
-            
             HStack {
-                Button("<- HomeView") {
+                Text("\(dataEdit.semesterIndex)")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.grayText)
+                
+                Spacer()
+                
+                Button(action: {
                     withAnimation {
                         viewRouter.currentPage = .homeView
                     }
                     
                     dataEdit.semesterIndex = ""
-                }.buttonStyle(BackButton())
-                
-                Spacer()
+                }) {
+                    Image(systemName: "xmark.circle.fill")
+                        .font(.title)
+                        .foregroundColor(Color.buttonColor)
+                }
             }
             
             Divider()
             
-            Text("courses")
+            Text("tap a course to edit")
                 .bold()
                 .foregroundColor(.gray)
             
@@ -52,13 +56,11 @@ struct SemesterView: View {
                         }
                     }
                 }
-            }
-            
-            Divider()
+            }.padding(-10)
             
             CourseView()
-            
-            Spacer()
+                .padding(.top, 10)
+                .padding(.bottom, 10)
         }.padding()
     }
 }

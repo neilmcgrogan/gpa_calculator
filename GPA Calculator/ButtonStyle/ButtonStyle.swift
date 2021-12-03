@@ -7,39 +7,18 @@
 
 import SwiftUI
 
-struct BackButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(7)
-            .background(Color.white)
-            .foregroundColor(.blue)
-            .clipShape(Capsule())
-            .scaleEffect(configuration.isPressed ? 0.9 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-    }
-}
-
-struct ForwardButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding(7)
-            .background(Color.lightGray)
-            .foregroundColor(.blue)
-            .clipShape(Capsule())
-            .scaleEffect(configuration.isPressed ? 0.9 : 1)
-            .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
-    }
-}
-
 struct ButtonUI: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(7)
-            .background(Color.gray)
+            .background(Color.buttonColor)
             .foregroundColor(.white)
-            .clipShape(Capsule())
+            .clipShape(Rectangle())
+            .cornerRadius(15)
             .scaleEffect(configuration.isPressed ? 0.9 : 1)
             .animation(.easeOut(duration: 0.2), value: configuration.isPressed)
+            .shadow(radius: 2)
+            .padding(.top, -10)
     }
 }
 

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B5DE37E27516F4F003654B1 /* HomeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37D27516F4F003654B1 /* HomeTile.swift */; };
+		0B3BA37527558B6A00E2F500 /* ProjectionTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BA37427558B6A00E2F500 /* ProjectionTile.swift */; };
+		0B5DE37E27516F4F003654B1 /* LargeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37D27516F4F003654B1 /* LargeTile.swift */; };
 		0B5DE380275183EA003654B1 /* SmallCourseTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */; };
 		AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2B27405FF0002452AA /* ButtonStyle.swift */; };
 		AD727E2E2740600A002452AA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2D2740600A002452AA /* DataModel.swift */; };
@@ -28,7 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B5DE37D27516F4F003654B1 /* HomeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTile.swift; sourceTree = "<group>"; };
+		0B3BA37427558B6A00E2F500 /* ProjectionTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectionTile.swift; sourceTree = "<group>"; };
+		0B3BA37627559F8700E2F500 /* GPA Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "GPA Calculator.entitlements"; sourceTree = "<group>"; };
+		0B3BA3772755B4F200E2F500 /* GPA-Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GPA-Calculator-Info.plist"; sourceTree = SOURCE_ROOT; };
+		0B5DE37D27516F4F003654B1 /* LargeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTile.swift; sourceTree = "<group>"; };
 		0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCourseTile.swift; sourceTree = "<group>"; };
 		AD727E2B27405FF0002452AA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		AD727E2D2740600A002452AA /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
@@ -81,7 +85,8 @@
 		AD91D3C62741B8CE002324E2 /* Tiles */ = {
 			isa = PBXGroup;
 			children = (
-				0B5DE37D27516F4F003654B1 /* HomeTile.swift */,
+				0B5DE37D27516F4F003654B1 /* LargeTile.swift */,
+				0B3BA37427558B6A00E2F500 /* ProjectionTile.swift */,
 				AD91D3C72741B8E1002324E2 /* CourseTile.swift */,
 				0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */,
 				AD91D3C92741FC41002324E2 /* SemesterTile.swift */,
@@ -108,6 +113,8 @@
 		ADA18F1927405EE700433379 /* GPA Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				0B3BA3772755B4F200E2F500 /* GPA-Calculator-Info.plist */,
+				0B3BA37627559F8700E2F500 /* GPA Calculator.entitlements */,
 				ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */,
 				ADA18F2A27405F9900433379 /* Model */,
 				ADA18F2B27405FA900433379 /* Views */,
@@ -239,6 +246,7 @@
 				AD91D3C82741B8E1002324E2 /* CourseTile.swift in Sources */,
 				AD727E2E2740600A002452AA /* DataModel.swift in Sources */,
 				ADA18F2D27405FC000433379 /* extension.swift in Sources */,
+				0B3BA37527558B6A00E2F500 /* ProjectionTile.swift in Sources */,
 				AD727E3627406055002452AA /* CourseView.swift in Sources */,
 				AD727E382740605A002452AA /* HomeView.swift in Sources */,
 				AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */,
@@ -247,7 +255,7 @@
 				AD727E3E2740606A002452AA /* ViewController.swift in Sources */,
 				AD727E3027406011002452AA /* ViewModel.swift in Sources */,
 				AD727E3C27406064002452AA /* SettingsView.swift in Sources */,
-				0B5DE37E27516F4F003654B1 /* HomeTile.swift in Sources */,
+				0B5DE37E27516F4F003654B1 /* LargeTile.swift in Sources */,
 				AD91D3CA2741FC41002324E2 /* SemesterTile.swift in Sources */,
 				AD727E322740604B002452AA /* AddCourseView.swift in Sources */,
 				ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */,
@@ -378,25 +386,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "GPA-Calculator-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fast GPA";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "playground.GPA-Calculator";
+				MARKETING_VERSION = 3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "McGogurt.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -408,25 +421,30 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "GPA-Calculator-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Fast GPA";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "playground.GPA-Calculator";
+				MARKETING_VERSION = 3.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "McGogurt.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
