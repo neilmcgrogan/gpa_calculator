@@ -10,6 +10,8 @@ import SwiftUI
 struct LargeTile: View {
     @EnvironmentObject var data: ShareData
     
+    let schoolType = UserDefaults.standard.string(forKey: "SchoolType")
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
@@ -21,16 +23,20 @@ struct LargeTile: View {
                 
                 Divider()
                 
-                if data.totalCredits() == 1 {
-                    Text("You have taken \(data.totalCredits()) credit")
+                if schoolType == "College" {
+                    if data.totalCredits() == 1 {
+                        Text("You have taken \(data.totalCredits()) credit")
+                    } else {
+                        Text("You have taken \(data.totalCredits()) credits")
+                    }
+                    
+                    if data.earnedCredits() == 1 {
+                        Text("You have earned \(data.earnedCredits(), specifier: "%.2f") credit")
+                    } else {
+                        Text("You have earned \(data.earnedCredits(), specifier: "%.2f") credits")
+                    }
                 } else {
-                    Text("You have taken \(data.totalCredits()) credits")
-                }
-                
-                if data.earnedCredits() == 1 {
-                    Text("You have earned \(data.earnedCredits(), specifier: "%.2f") credit")
-                } else {
-                    Text("You have earned \(data.earnedCredits(), specifier: "%.2f") credits")
+                    Text("Your GPA is \(data.gpa()) over \(data.courses.count) semesters")
                 }
                 
                 Spacer()

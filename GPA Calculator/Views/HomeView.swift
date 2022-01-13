@@ -12,101 +12,103 @@ struct HomeView: View {
     @EnvironmentObject var data: ShareData
     @EnvironmentObject var dataEdit: DataEdit
     
-    let homeViewName = "Fast GPA"
+    let name = UserDefaults.standard.string(forKey: "Name") ?? ""
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text(homeViewName)
-                    .font(.title)
-                    .foregroundColor(.grayText)
-                    .bold()
-                
-                Spacer()
-                
-                if data.gpa() >= 0  {
-                    Text("\(data.gpa(), specifier: "%.4f")")
+        ZStack {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(name == "" ? "Hello," : "Hello \(name)," )
                         .font(.title)
                         .foregroundColor(.grayText)
                         .bold()
+                    
+                    Spacer()
                 }
-            }
-            
-            Divider()
-            
-            if data.courses.count == 0 {
-                Text("Press the '+' in the bottom right to start")
-                    .foregroundColor(.black)
-            } else {
-                VStack(alignment: .leading) {
-                    Text("semesters")
-                        .bold()
-                        .foregroundColor(.gray)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack {
-                            ForEach(0..<Int(data.Semesters().count), id: \.self) { index in
-                                VStack {
-                                    Button(action: {
-                                        dataEdit.semesterIndex = data.Semesters()[index]
-                                        
-                                        withAnimation() {
-                                            viewRouter.currentPage = .semesterView
-                                        }
-                                    }) {
-                                        SemesterTile(GPA: filterGPA(filter: data.Semesters()[index]), semester: data.Semesters()[index], creditsTaken: (filterTotalCredits(filter: data.Semesters()[index])), creditsEarned: (filterEarnedCredits(filter: data.Semesters()[index])))
-                                    }
-                                }
-                            }
-                        }
-                    }.padding(-10)
-                    
-                    Text("summary")
-                        .bold()
-                        .foregroundColor(.gray)
-                    
-                    LargeTile()
-                        .padding(-10)
-                    
-                    if data.gpa() < 3.6667 {
-                        Text("projections")
+                
+                if data.courses.count == 0 {
+                    Text("Press the '+' in the bottom right to start")
+                        .foregroundColor(.black)
+                } else {
+                    VStack(alignment: .leading) {
+                        Text("semesters")
                             .bold()
                             .foregroundColor(.gray)
                         
-                        ProjectionTile()
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                ForEach(0..<Int(data.Semesters().count), id: \.self) { index in
+                                    VStack {
+                                        Button(action: {
+                                            dataEdit.semesterIndex = data.Semesters()[index]
+                                            
+                                            withAnimation() {
+                                                viewRouter.currentPage = .semesterView
+                                            }
+                                        }) {
+                                            SemesterTile(GPA: filterGPA(filter: data.Semesters()[index]), semester: data.Semesters()[index], creditsTaken: (filterTotalCredits(filter: data.Semesters()[index])), creditsEarned: (filterEarnedCredits(filter: data.Semesters()[index])))
+                                        }
+                                    }
+                                }
+                            }
+                        }.padding(-10)
+                        
+                        Text("summary")
+                            .bold()
+                            .foregroundColor(.gray)
+                        
+                        LargeTile()
                             .padding(-10)
+                        
+                        if data.gpa() < 3.6667 {
+                            Text("projections")
+                                .bold()
+                                .foregroundColor(.gray)
+                            
+                            ProjectionTile()
+                                .padding(-10)
+                        }
                     }
-                }
-            }
-            
-            Spacer()
-            
-            HStack {
-                Button(action: {
-                    withAnimation {
-                        viewRouter.currentPage = .settingsView
-                    }
-                }) {
-                    Image(systemName: "questionmark.circle.fill")
-                        .font(.largeTitle)
-                        .foregroundColor(Color.buttonColor)
                 }
                 
                 Spacer()
                 
-                Button(action: {
-                    withAnimation {
-                        viewRouter.currentPage = .addSemesterView
-                    }
-                }) {
-                    Image(systemName: "plus.circle.fill")
-                        .font(.largeTitle)
-                        .foregroundColor(Color.buttonColor)
-                }
             }.padding()
-        }.padding()
-        .onAppear() {
-            data.getItems()
+            .onAppear() {
+                data.getItems()
+            }
+            
+            VStack {
+                Spacer()
+                
+                ZStack {
+                    HStack {
+                        Button(action: {
+                            withAnimation {
+                                viewRouter.currentPage = .settingsView
+                            }
+                        }) {
+                            Image(systemName: "questionmark.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(Color.primaryColor)
+                        }.background(Color.white)
+                        .padding(.bottom, -10)
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            withAnimation {
+                                viewRouter.currentPage = .addSemesterView
+                            }
+                        }) {
+                            Image(systemName: "plus.circle.fill")
+                                .font(.largeTitle)
+                                .foregroundColor(Color.primaryColor)
+                                .background(Color.white)
+                        }
+                    }.padding()
+                }
+            }
         }
     }
     

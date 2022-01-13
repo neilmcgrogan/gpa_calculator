@@ -12,17 +12,21 @@ struct CourseTile: View {
     let name: String
     let credits: Int
     
+    let schoolType = UserDefaults.standard.string(forKey: "SchoolType")
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
-                Text("\(grade)").bold().font(.title2).foregroundColor(.buttonColor)
+                Text("\(grade)").bold().font(.title2).foregroundColor(.primaryColor)
                 
                 Text(name).bold().foregroundColor(Color.grayText)
                 
-                if credits == 1 {
-                    Text("\(credits) credit").font(.footnote).foregroundColor(.gray)
-                } else {
-                    Text("\(credits) credits").font(.footnote).foregroundColor(.gray)
+                if schoolType == "College" {
+                    if credits == 1 {
+                        Text("\(credits) credit").font(.footnote).foregroundColor(.gray)
+                    } else {
+                        Text("\(credits) credits").font(.footnote).foregroundColor(.gray)
+                    }
                 }
                 
                 Spacer()

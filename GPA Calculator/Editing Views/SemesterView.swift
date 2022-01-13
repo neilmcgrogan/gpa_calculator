@@ -31,7 +31,7 @@ struct SemesterView: View {
                 }) {
                     Image(systemName: "xmark.circle.fill")
                         .font(.title)
-                        .foregroundColor(Color.buttonColor)
+                        .foregroundColor(Color.primaryColor)
                 }
             }
             

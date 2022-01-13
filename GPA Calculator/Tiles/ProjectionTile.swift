@@ -10,6 +10,8 @@ import SwiftUI
 struct ProjectionTile: View {
     @EnvironmentObject var data: ShareData
     
+    let schoolType = UserDefaults.standard.string(forKey: "SchoolType")
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 4) {
@@ -18,12 +20,22 @@ struct ProjectionTile: View {
                     
                     Text("goal gpa")
                     
-                    Text("\(data.nextCreditsTotal())").font(.title2).bold()
-                    
-                    if data.nextCreditsTotal() == 1 {
-                        Text(" credit needed")
-                    } else  {
-                        Text(" credits needed")
+                    if schoolType == "College" {
+                        Text("\(data.nextCreditsTotal())").font(.title2).bold()
+                        
+                        if data.nextCreditsTotal() == 1 {
+                            Text(" credit needed")
+                        } else  {
+                            Text(" credits needed")
+                        }
+                    } else {
+                        Text("\(data.nextCreditsTotal())").font(.title2).bold()
+                        
+                        if data.nextCreditsTotal() == 1 {
+                            Text(" courses needed")
+                        } else  {
+                            Text(" courses needed")
+                        }
                     }
                     
                     Spacer()
@@ -31,10 +43,18 @@ struct ProjectionTile: View {
                 
                 Divider()
                 
-                if data.nextCreditsTotal() == 1 {
-                    Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) credit")
-                } else  {
-                    Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) credits")
+                if schoolType == "College" {
+                    if data.nextCreditsTotal() == 1 {
+                        Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) credit")
+                    } else  {
+                        Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) credits")
+                    }
+                } else {
+                    if data.nextCreditsTotal() == 1 {
+                        Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) course")
+                    } else  {
+                        Text("To reach a \(data.nextLetterGrade()) average, you need to maintain an A average over \(data.nextCreditsTotal()) courses")
+                    }
                 }
                 
                 Spacer()

@@ -21,9 +21,9 @@ struct AddSemesterView: View {
 
     
     init() {
-        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.buttonColor)
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.primaryColor)
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.buttonColor)], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor(Color.primaryColor)], for: .normal)
     }
     
     var body: some View {
@@ -45,7 +45,7 @@ struct AddSemesterView: View {
                     }) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title)
-                            .foregroundColor(Color.buttonColor)
+                            .foregroundColor(Color.primaryColor)
                     }
                 }
                 
@@ -68,6 +68,7 @@ struct AddSemesterView: View {
                 Picker("", selection: $year) {
                     ForEach(10...30, id: \.self) {
                         Text("'\($0)")
+                            .foregroundColor(.black)
                     }
                 }.pickerStyle(WheelPickerStyle())
                 
@@ -103,7 +104,7 @@ struct AddSemesterView: View {
                     }) {
                         Image(systemName: "xmark.circle.fill")
                             .font(.title)
-                            .foregroundColor(Color.buttonColor)
+                            .foregroundColor(Color.primaryColor)
                     }
                 }
                 
@@ -149,7 +150,7 @@ struct AddSemesterView: View {
                             }.padding(5)
                             .foregroundColor(.white)
                             .frame(width: 125, height: 65, alignment: .center)
-                            .background(Color.buttonColor)
+                            .background(Color.primaryColor)
                             .cornerRadius(15)
                             
                             ForEach(data.courses) { course in

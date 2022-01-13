@@ -22,6 +22,8 @@ struct AddCourseView: View {
     @State var selectedGrade = 0
     @State var selectedSymbol = 1
     
+    let schoolType = UserDefaults.standard.string(forKey: "SchoolType")
+    
     var body: some View {
         VStack {
             VStack(alignment: .leading, spacing: 4) {
@@ -70,16 +72,18 @@ struct AddCourseView: View {
                     }).pickerStyle(SegmentedPickerStyle())
                 }
                 
-                Text("credits in course")
-                    .bold()
-                    .foregroundColor(.gray)
-                
-                Picker(selection: $credits, label: Text(""), content: {
-                    ForEach(1...5, id: \.self) { index in
-                        Text("\(Int(index))")//.tag(grade)
-                    }
-                }).pickerStyle(SegmentedPickerStyle())
-                .padding(.bottom, 15)
+                if schoolType == "College" {
+                    Text("credits in course")
+                        .bold()
+                        .foregroundColor(.gray)
+                    
+                    Picker(selection: $credits, label: Text(""), content: {
+                        ForEach(1...5, id: \.self) { index in
+                            Text("\(Int(index))")//.tag(grade)
+                        }
+                    }).pickerStyle(SegmentedPickerStyle())
+                    .padding(.bottom, 15)
+                }
             }
             
             if self.name == "" {
@@ -100,10 +104,12 @@ struct AddCourseView: View {
                             
                             Text(self.name).bold().foregroundColor(Color.white)
                             
-                            if self.credits == 1 {
-                                Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
-                            } else {
-                                Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                            if schoolType == "College" {
+                                if self.credits == 1 {
+                                    Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
+                                } else {
+                                    Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                                }
                             }
                             
                             Spacer()
@@ -119,7 +125,7 @@ struct AddCourseView: View {
                         }.font(.title3)
                     }.foregroundColor(Color.white)
                     .padding(8)
-                    .background(Color.buttonColor)
+                    .background(Color.primaryColor)
                     .cornerRadius(12)
                     .frame(height: 65, alignment: .center)
                 }

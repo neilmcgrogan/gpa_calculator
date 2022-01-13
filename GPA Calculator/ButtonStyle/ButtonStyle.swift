@@ -11,7 +11,7 @@ struct ButtonUI: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding(7)
-            .background(Color.buttonColor)
+            .background(Color.primaryColor)
             .foregroundColor(.white)
             .clipShape(Rectangle())
             .cornerRadius(15)

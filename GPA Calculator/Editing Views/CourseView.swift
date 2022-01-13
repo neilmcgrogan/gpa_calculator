@@ -21,6 +21,8 @@ struct CourseView: View {
     @State var selectedGrade = 0
     @State var selectedSymbol = 1
     
+    let schoolType = UserDefaults.standard.string(forKey: "SchoolType")
+    
     var body: some View {
         ForEach(data.courses) { course in
             if dataEdit.coursePointer == course.id {
@@ -59,12 +61,14 @@ struct CourseView: View {
                         }).pickerStyle(SegmentedPickerStyle())
                     }
                     
-                    Picker(selection: $credits, label: Text(""), content: {
-                        ForEach(1...5, id: \.self) { index in
-                            Text("\(Int(index))")//.tag(grade)
-                        }
-                    }).pickerStyle(SegmentedPickerStyle())
-                    .padding(.bottom, 15)
+                    if schoolType == "College" {
+                        Picker(selection: $credits, label: Text(""), content: {
+                            ForEach(1...5, id: \.self) { index in
+                                Text("\(Int(index))")//.tag(grade)
+                            }
+                        }).pickerStyle(SegmentedPickerStyle())
+                        .padding(.bottom, 15)
+                    }
                     
                     if self.name != "" {
                         Button(action: {
@@ -77,10 +81,12 @@ struct CourseView: View {
                                     
                                     Text(self.name).bold().foregroundColor(Color.white)
                                     
-                                    if self.credits == 1 {
-                                        Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
-                                    } else {
-                                        Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                                    if schoolType == "College" {
+                                        if self.credits == 1 {
+                                            Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
+                                        } else {
+                                            Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                                        }
                                     }
                                     
                                     Spacer()
@@ -97,7 +103,7 @@ struct CourseView: View {
                             }.padding()
                                 .foregroundColor(Color.white)
                                 .frame(height: 100, alignment: .center)
-                                .background(Color.buttonColor)
+                                .background(Color.primaryColor)
                                 .cornerRadius(12)
                         }
                         
@@ -111,10 +117,12 @@ struct CourseView: View {
                                     
                                     Text(self.name).bold().foregroundColor(Color.white)
                                     
-                                    if self.credits == 1 {
-                                        Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
-                                    } else {
-                                        Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                                    if schoolType == "College" {
+                                        if self.credits == 1 {
+                                            Text("\(self.credits) credit").font(.footnote).foregroundColor(Color.white)
+                                        } else {
+                                            Text("\(self.credits) credits").font(.footnote).foregroundColor(Color.white)
+                                        }
                                     }
                                     
                                     Spacer()
@@ -131,7 +139,7 @@ struct CourseView: View {
                             }.padding()
                             .foregroundColor(Color.white)
                             .frame(height: 100, alignment: .center)
-                            .background(Color.buttonColor)
+                            .background(Color.primaryColor)
                             .cornerRadius(12)
                         }
                     }

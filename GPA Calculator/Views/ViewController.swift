@@ -13,6 +13,8 @@ struct ViewController: View {
     var body: some View {
         VStack {
             switch viewRouter.currentPage {
+            case .onboardingView:
+                OnboardingView()
             case .homeView:
                 HomeView()
             case .settingsView:
