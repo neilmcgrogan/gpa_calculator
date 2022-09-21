@@ -9,8 +9,19 @@ import SwiftUI
 
 struct ViewController: View {
     @EnvironmentObject var viewRouter: ViewRouter
-    
+    let vm = ViewModel()
     var body: some View {
+        ZStack {
+            Color.white.edgesIgnoringSafeArea(.all)
+            
+            views
+                .foregroundColor(.primaryColor)
+        }
+    }
+}
+
+extension ViewController {
+    private var views: some View {
         VStack {
             switch viewRouter.currentPage {
             case .onboardingView:
@@ -20,12 +31,21 @@ struct ViewController: View {
             case .settingsView:
                 SettingsView()
             case .addSemesterView:
-                AddSemesterView()
+                AddView()
             case .semesterView:
                 SemesterView()
             }
-            
-            Spacer()
         }
     }
 }
+
+struct ViewController_Previews: PreviewProvider {
+    static var previews: some View {
+        ViewController()
+            .environmentObject(ViewRouter())
+            .environmentObject(DataEdit())
+            .environmentObject(ShareData())
+            .environmentObject(Settings())
+    }
+}
+

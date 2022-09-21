@@ -47,6 +47,7 @@ class ShareData: ObservableObject {
             saveItems()
         }
     }
+    
     var currIndex = ""
     let itemsKey: String = "saved_courses"
     
@@ -204,5 +205,17 @@ class ShareData: ObservableObject {
         }
         
         return addedCredits
+    }
+    
+    func filteredCourses(semester: String) -> [CourseModel] {
+        var ret: [CourseModel] = []
+        
+        for item in courses {
+            if semester == item.semesterName {
+                ret.append(item)
+            }
+        }
+        
+        return ret
     }
 }

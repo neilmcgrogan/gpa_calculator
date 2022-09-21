@@ -9,8 +9,10 @@
 	</dict>
 	<key>UILaunchScreen</key>
 	<dict>
-		<key>UIImageName</key>
+		<key>UIColorName</key>
 		<string>bg</string>
+		<key>UIImageName</key>
+		<string>logo</string>
 	</dict>
 </dict>
 </plist>

@@ -61,6 +61,22 @@ struct SemesterView: View {
             CourseView()
                 .padding(.top, 10)
                 .padding(.bottom, 10)
+            
+            Spacer()
         }.padding()
+            .onAppear() {
+                /// get rid of this later
+                data.courses.append(CourseModel(id: 1, name: "maths", grade: "A", credits: 3, semesterName: "Fall 2022"))
+            }
+    }
+}
+
+struct SemesterView_Previews: PreviewProvider {
+    static var previews: some View {
+        SemesterView()
+            .environmentObject(ViewRouter())
+            .environmentObject(DataEdit())
+            .environmentObject(ShareData())
+            .environmentObject(Settings())
     }
 }

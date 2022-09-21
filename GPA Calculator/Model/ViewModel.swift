@@ -2,25 +2,17 @@
 //  ViewModel.swift
 //  GPA Calculator
 //
-//  Created by Neil McGrogan on 11/13/21.
+//  Created by Neil McGrogan on 9/19/22.
 //
 
+import Foundation
 import SwiftUI
 
-class ViewRouter: ObservableObject {
-    
-    @Published var currentPage: Page = .homeView
-    
-    init() {
-        if !UserDefaults.standard.bool(forKey: "didLaunchBefore") {
-            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
-            currentPage = .onboardingView
-        } else {
-            currentPage = .homeView
-        }
-    }
-}
-
-enum Page {
-    case onboardingView, homeView, settingsView, addSemesterView, semesterView
+struct ViewModel {
+    let content_width = UIScreen.main.bounds.width * 0.9
+    let timer = Timer.publish(every: 0.01, on: .main, in: .common).autoconnect()
+    let semNames = ["Fall", "Spring", "Summer"]
+    let subjects = ["Math", "Science", "English", "History"]
+    let collegeGrades = ["A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"]
+    let highschoolGrades = ["A+", "A", "A-", "B+", "B", "B-", "C+", "C", "C-", "D+", "D", "D-", "F"]
 }

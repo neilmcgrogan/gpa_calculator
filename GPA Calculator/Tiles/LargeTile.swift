@@ -17,11 +17,8 @@ struct LargeTile: View {
             VStack(alignment: .leading, spacing: 4) {
                 HStack(alignment: .center) {
                     Text("\(data.letterGrade(gpa: data.gpa()))").font(.title2).bold()
-                    
                     Text("average")
                 }
-                
-                Divider()
                 
                 if schoolType == "College" {
                     if data.totalCredits() == 1 {
@@ -49,5 +46,15 @@ struct LargeTile: View {
         .cornerRadius(15)
         .shadow(radius: 2)
         .padding(5)
+    }
+}
+
+struct LargeTile_Previews: PreviewProvider {
+    static var previews: some View {
+        LargeTile()
+            .environmentObject(ViewRouter())
+            .environmentObject(DataEdit())
+            .environmentObject(ShareData())
+            .environmentObject(Settings())
     }
 }

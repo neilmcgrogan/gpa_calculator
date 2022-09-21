@@ -10,20 +10,19 @@
 		0B3BA37527558B6A00E2F500 /* ProjectionTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3BA37427558B6A00E2F500 /* ProjectionTile.swift */; };
 		0B5DE37E27516F4F003654B1 /* LargeTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37D27516F4F003654B1 /* LargeTile.swift */; };
 		0B5DE380275183EA003654B1 /* SmallCourseTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */; };
-		AD6D5F7427906BEC001B1DC1 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6D5F7327906BEB001B1DC1 /* OnboardingView.swift */; };
-		AD6D5F7627906D9E001B1DC1 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6D5F7527906D9E001B1DC1 /* PageControl.swift */; };
-		AD6D5F7827906DB4001B1DC1 /* Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6D5F7727906DB4001B1DC1 /* Subview.swift */; };
-		AD6D5F7A27906DD3001B1DC1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6D5F7927906DD3001B1DC1 /* PageViewController.swift */; };
+		AD197B9E28DA1B0700160903 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197B9D28DA1B0700160903 /* Settings.swift */; };
+		AD197BA428DA249600160903 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BA328DA249600160903 /* OnboardView.swift */; };
+		AD197BA628DA24B300160903 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BA528DA24B300160903 /* SettingsView.swift */; };
+		AD197BA828DA24B700160903 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BA728DA24B700160903 /* ViewController.swift */; };
+		AD197BAA28DA24BB00160903 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BA928DA24BB00160903 /* HomeView.swift */; };
+		AD197BAD28DA251B00160903 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BAC28DA251B00160903 /* Button.swift */; };
+		AD197BB528DA291F00160903 /* SemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BB428DA291F00160903 /* SemesterView.swift */; };
+		AD197BB728DA292300160903 /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BB628DA292300160903 /* CourseView.swift */; };
+		AD197BB928DA2DF500160903 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD197BB828DA2DF500160903 /* AddView.swift */; };
+		AD38B0CD28D942590063A2DA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD38B0CC28D942590063A2DA /* ViewModel.swift */; };
 		AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2B27405FF0002452AA /* ButtonStyle.swift */; };
 		AD727E2E2740600A002452AA /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2D2740600A002452AA /* DataModel.swift */; };
-		AD727E3027406011002452AA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2F27406011002452AA /* ViewModel.swift */; };
-		AD727E322740604B002452AA /* AddCourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E312740604B002452AA /* AddCourseView.swift */; };
-		AD727E3427406051002452AA /* AddSemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3327406051002452AA /* AddSemesterView.swift */; };
-		AD727E3627406055002452AA /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3527406055002452AA /* CourseView.swift */; };
-		AD727E382740605A002452AA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E372740605A002452AA /* HomeView.swift */; };
-		AD727E3A2740605F002452AA /* SemesterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E392740605F002452AA /* SemesterView.swift */; };
-		AD727E3C27406064002452AA /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3B27406064002452AA /* SettingsView.swift */; };
-		AD727E3E2740606A002452AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E3D2740606A002452AA /* ViewController.swift */; };
+		AD727E3027406011002452AA /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD727E2F27406011002452AA /* ViewRouter.swift */; };
 		AD91D3C82741B8E1002324E2 /* CourseTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91D3C72741B8E1002324E2 /* CourseTile.swift */; };
 		AD91D3CA2741FC41002324E2 /* SemesterTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD91D3C92741FC41002324E2 /* SemesterTile.swift */; };
 		ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */; };
@@ -38,20 +37,19 @@
 		0B3BA3772755B4F200E2F500 /* GPA-Calculator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GPA-Calculator-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0B5DE37D27516F4F003654B1 /* LargeTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTile.swift; sourceTree = "<group>"; };
 		0B5DE37F275183EA003654B1 /* SmallCourseTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallCourseTile.swift; sourceTree = "<group>"; };
-		AD6D5F7327906BEB001B1DC1 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		AD6D5F7527906D9E001B1DC1 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
-		AD6D5F7727906DB4001B1DC1 /* Subview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subview.swift; sourceTree = "<group>"; };
-		AD6D5F7927906DD3001B1DC1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		AD197B9D28DA1B0700160903 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		AD197BA328DA249600160903 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		AD197BA528DA24B300160903 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AD197BA728DA24B700160903 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD197BA928DA24BB00160903 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		AD197BAC28DA251B00160903 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		AD197BB428DA291F00160903 /* SemesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterView.swift; sourceTree = "<group>"; };
+		AD197BB628DA292300160903 /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		AD197BB828DA2DF500160903 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		AD38B0CC28D942590063A2DA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		AD727E2B27405FF0002452AA /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 		AD727E2D2740600A002452AA /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		AD727E2F27406011002452AA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		AD727E312740604B002452AA /* AddCourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCourseView.swift; sourceTree = "<group>"; };
-		AD727E3327406051002452AA /* AddSemesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSemesterView.swift; sourceTree = "<group>"; };
-		AD727E3527406055002452AA /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
-		AD727E372740605A002452AA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		AD727E392740605F002452AA /* SemesterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterView.swift; sourceTree = "<group>"; };
-		AD727E3B27406064002452AA /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		AD727E3D2740606A002452AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AD727E2F27406011002452AA /* ViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		AD91D3C72741B8E1002324E2 /* CourseTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseTile.swift; sourceTree = "<group>"; };
 		AD91D3C92741FC41002324E2 /* SemesterTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SemesterTile.swift; sourceTree = "<group>"; };
 		ADA18F1727405EE700433379 /* GPA Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GPA Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,33 +70,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0BE8A326274C377E0091CD5B /* Adding Views */ = {
+		AD197B9C28DA1B0100160903 /* UserData */ = {
 			isa = PBXGroup;
 			children = (
-				AD727E3327406051002452AA /* AddSemesterView.swift */,
-				AD727E312740604B002452AA /* AddCourseView.swift */,
+				AD197B9D28DA1B0700160903 /* Settings.swift */,
 			);
-			path = "Adding Views";
+			path = UserData;
 			sourceTree = "<group>";
 		};
-		0BE8A327274EA4E90091CD5B /* Editing Views */ = {
+		AD197B9F28DA247900160903 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				AD727E392740605F002452AA /* SemesterView.swift */,
-				AD727E3527406055002452AA /* CourseView.swift */,
+				AD197BA228DA249000160903 /* Views */,
+				AD197BAB28DA24EC00160903 /* Components */,
 			);
-			path = "Editing Views";
+			path = Core;
 			sourceTree = "<group>";
 		};
-		AD6D5F7227906BD9001B1DC1 /* OnboardingView */ = {
+		AD197BA228DA249000160903 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AD6D5F7327906BEB001B1DC1 /* OnboardingView.swift */,
-				AD6D5F7527906D9E001B1DC1 /* PageControl.swift */,
-				AD6D5F7727906DB4001B1DC1 /* Subview.swift */,
-				AD6D5F7927906DD3001B1DC1 /* PageViewController.swift */,
+				AD197BA728DA24B700160903 /* ViewController.swift */,
+				AD197BA328DA249600160903 /* OnboardView.swift */,
+				AD197BA928DA24BB00160903 /* HomeView.swift */,
+				AD197BA528DA24B300160903 /* SettingsView.swift */,
+				AD197BB828DA2DF500160903 /* AddView.swift */,
+				AD197BB328DA291600160903 /* EditingViews */,
 			);
-			path = OnboardingView;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AD197BAB28DA24EC00160903 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				AD197BAC28DA251B00160903 /* Button.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		AD197BB328DA291600160903 /* EditingViews */ = {
+			isa = PBXGroup;
+			children = (
+				AD197BB428DA291F00160903 /* SemesterView.swift */,
+				AD197BB628DA292300160903 /* CourseView.swift */,
+			);
+			path = EditingViews;
 			sourceTree = "<group>";
 		};
 		AD91D3C62741B8CE002324E2 /* Tiles */ = {
@@ -135,11 +151,9 @@
 				0B3BA3772755B4F200E2F500 /* GPA-Calculator-Info.plist */,
 				0B3BA37627559F8700E2F500 /* GPA Calculator.entitlements */,
 				ADA18F1A27405EE700433379 /* GPA_CalculatorApp.swift */,
-				AD6D5F7227906BD9001B1DC1 /* OnboardingView */,
 				ADA18F2A27405F9900433379 /* Model */,
-				ADA18F2B27405FA900433379 /* Views */,
-				0BE8A327274EA4E90091CD5B /* Editing Views */,
-				0BE8A326274C377E0091CD5B /* Adding Views */,
+				AD197B9C28DA1B0100160903 /* UserData */,
+				AD197B9F28DA247900160903 /* Core */,
 				AD91D3C62741B8CE002324E2 /* Tiles */,
 				ADA18F2927405F8000433379 /* ButtonStyle */,
 				ADA18F2827405F6E00433379 /* Elements */,
@@ -177,19 +191,10 @@
 			isa = PBXGroup;
 			children = (
 				AD727E2D2740600A002452AA /* DataModel.swift */,
-				AD727E2F27406011002452AA /* ViewModel.swift */,
+				AD727E2F27406011002452AA /* ViewRouter.swift */,
+				AD38B0CC28D942590063A2DA /* ViewModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		ADA18F2B27405FA900433379 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AD727E3B27406064002452AA /* SettingsView.swift */,
-				AD727E3D2740606A002452AA /* ViewController.swift */,
-				AD727E372740605A002452AA /* HomeView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,27 +267,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD727E3A2740605F002452AA /* SemesterView.swift in Sources */,
+				AD197BB528DA291F00160903 /* SemesterView.swift in Sources */,
+				AD197BB928DA2DF500160903 /* AddView.swift in Sources */,
+				AD197BB728DA292300160903 /* CourseView.swift in Sources */,
+				AD197BA628DA24B300160903 /* SettingsView.swift in Sources */,
 				AD91D3C82741B8E1002324E2 /* CourseTile.swift in Sources */,
 				AD727E2E2740600A002452AA /* DataModel.swift in Sources */,
-				AD6D5F7427906BEC001B1DC1 /* OnboardingView.swift in Sources */,
+				AD197BA828DA24B700160903 /* ViewController.swift in Sources */,
 				ADA18F2D27405FC000433379 /* extension.swift in Sources */,
-				AD6D5F7827906DB4001B1DC1 /* Subview.swift in Sources */,
+				AD38B0CD28D942590063A2DA /* ViewModel.swift in Sources */,
+				AD197BAD28DA251B00160903 /* Button.swift in Sources */,
 				0B3BA37527558B6A00E2F500 /* ProjectionTile.swift in Sources */,
-				AD727E3627406055002452AA /* CourseView.swift in Sources */,
-				AD727E382740605A002452AA /* HomeView.swift in Sources */,
+				AD197BA428DA249600160903 /* OnboardView.swift in Sources */,
 				AD727E2C27405FF0002452AA /* ButtonStyle.swift in Sources */,
-				AD727E3427406051002452AA /* AddSemesterView.swift in Sources */,
 				0B5DE380275183EA003654B1 /* SmallCourseTile.swift in Sources */,
-				AD727E3E2740606A002452AA /* ViewController.swift in Sources */,
-				AD727E3027406011002452AA /* ViewModel.swift in Sources */,
-				AD727E3C27406064002452AA /* SettingsView.swift in Sources */,
-				AD6D5F7A27906DD3001B1DC1 /* PageViewController.swift in Sources */,
+				AD727E3027406011002452AA /* ViewRouter.swift in Sources */,
+				AD197B9E28DA1B0700160903 /* Settings.swift in Sources */,
 				0B5DE37E27516F4F003654B1 /* LargeTile.swift in Sources */,
 				AD91D3CA2741FC41002324E2 /* SemesterTile.swift in Sources */,
-				AD727E322740604B002452AA /* AddCourseView.swift in Sources */,
+				AD197BAA28DA24BB00160903 /* HomeView.swift in Sources */,
 				ADA18F1B27405EE700433379 /* GPA_CalculatorApp.swift in Sources */,
-				AD6D5F7627906D9E001B1DC1 /* PageControl.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
@@ -430,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "McGogurt.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;
@@ -447,7 +451,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "GPA Calculator/GPA Calculator.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"GPA Calculator/Preview Content\"";
 				DEVELOPMENT_TEAM = HA6YWKP834;
 				ENABLE_PREVIEWS = YES;
@@ -465,7 +469,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "McGogurt.GPA-Calculator";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = NO;

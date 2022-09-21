@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/*
+ For preview purposes
+ 3 ch each
+ A math
+ B Science
+ B- English
+ B- History
+ A Math
+ */
+
 @main
 struct GP_TestApp: App {
     var body: some Scene {
@@ -49,6 +59,7 @@ struct ContentView: View {
                 .environmentObject(ViewRouter())
                 .environmentObject(DataEdit())
                 .environmentObject(ShareData())
+                .environmentObject(Settings())
         }
     }
     

@@ -17,13 +17,15 @@ extension Sequence where Element: Hashable {
 extension Color {
     static var grayText = Color(red: 0.2, green: 0.2, blue: 0.2)
     static var lightGray = Color(red: 210/255, green: 210/255, blue: 210/255)
-    static var primaryColor = Color(red: 125/255, green: 100/255, blue: 250/255)
+    static var primaryColor = Color(red: 47/255, green: 60/255, blue: 126/255)
+    static var secondColor = Color(red: 251/255, green: 234/255, blue: 235/255)
 }
 
 struct Extension: View {
     var body: some View {
         VStack {
             Color.primaryColor
+            Color.secondColor
             Color.grayText
             Color.lightGray
         }

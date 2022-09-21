@@ -7,28 +7,46 @@
 
 import SwiftUI
 
+/*
+ 
+ Create previews
+ Add ads
+ 
+ */
+
 struct HomeView: View {
     @EnvironmentObject var viewRouter: ViewRouter
     @EnvironmentObject var data: ShareData
     @EnvironmentObject var dataEdit: DataEdit
-    
-    let name = UserDefaults.standard.string(forKey: "Name") ?? ""
+    @EnvironmentObject var settings: Settings
     
     var body: some View {
         ZStack {
             VStack(alignment: .leading) {
                 HStack {
-                    Text(name == "" ? "Hello," : "Hello \(name)," )
-                        .font(.title)
-                        .foregroundColor(.grayText)
+                    Text(settings.name == "" ? "Hello," : "Hello \(settings.name)," )
+                        .font(.largeTitle)
+                        .foregroundColor(.primaryColor)
                         .bold()
                     
                     Spacer()
+                    
+                    Button(action: {
+                        withAnimation {
+                            viewRouter.currentPage = .settingsView
+                        }
+                    }) {
+                        Image(systemName: "person.circle.fill")
+                            .font(.title)
+                            .foregroundColor(Color.primaryColor)
+                    }.background(Color.white)
                 }
                 
                 if data.courses.count == 0 {
-                    Text("Press the '+' in the bottom right to start")
+                    Text("You have no saved semesters. Press the '+' in the bottom right to get started.")
+                        .font(.headline)
                         .foregroundColor(.black)
+                        .multilineTextAlignment(.leading)
                 } else {
                     VStack(alignment: .leading) {
                         Text("semesters")
@@ -83,17 +101,6 @@ struct HomeView: View {
                 
                 ZStack {
                     HStack {
-                        Button(action: {
-                            withAnimation {
-                                viewRouter.currentPage = .settingsView
-                            }
-                        }) {
-                            Image(systemName: "questionmark.circle.fill")
-                                .font(.largeTitle)
-                                .foregroundColor(Color.primaryColor)
-                        }.background(Color.white)
-                        .padding(.bottom, -10)
-                        
                         Spacer()
                         
                         Button(action: {
@@ -101,10 +108,7 @@ struct HomeView: View {
                                 viewRouter.currentPage = .addSemesterView
                             }
                         }) {
-                            Image(systemName: "plus.circle.fill")
-                                .font(.largeTitle)
-                                .foregroundColor(Color.primaryColor)
-                                .background(Color.white)
+                            AddButton()
                         }
                     }.padding()
                 }
@@ -163,12 +167,20 @@ struct HomeView: View {
                     gpaArr = 0.0000
                 }
             }
-            
             earnedCredits += (gpaArr * Float(course.credits))
-            
             gpaArr = 0
         }
         
         return earnedCredits
+    }
+}
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
+            .environmentObject(ViewRouter())
+            .environmentObject(DataEdit())
+            .environmentObject(ShareData())
+            .environmentObject(Settings())
     }
 }
